@@ -1,10 +1,11 @@
 import React from 'react'
-import { pageLinks, socialLinks } from '../data'
+import PageLinks from './PageLinks';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
     <footer className="section footer">
-      <ul className="footer-links">
+      {/* <ul className="footer-links">
         {pageLinks.map((link) => {
           const {id, href, text} = link;
           return (
@@ -13,10 +14,12 @@ const Footer = () => {
           </li>
           );
         })}
-      </ul>
+      </ul> */}
 
+      <PageLinks parentClass='footer-links' itemClass='footer-link' />
+      <SocialLinks parentClass='footer-icons' itemClass='footer-icon' />
 
-      <ul className="footer-icons">
+      {/* <ul className="footer-icons">
         {socialLinks.map((link) => {
           const {id, href, icon} = link;
           return (
@@ -32,7 +35,7 @@ const Footer = () => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <p className="copyright">
         copyright &copy; Backroads travel tours company
         <span id="date">{new Date().getFullYear()}</span> all rights reserved

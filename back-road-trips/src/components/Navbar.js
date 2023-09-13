@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "../assets/logo.svg"
-import { pageLinks, socialLinks } from '../data'
+import PageLinks from './PageLinks'
+import SocialLinks from './SocialLinks'
 
 const Navbar = () => {
   return (
@@ -12,8 +13,10 @@ const Navbar = () => {
             <i className="fas fa-bars"></i>
           </button>
         </div>
+
         
-        <ul className="nav-links" id="nav-links">
+        
+        {/* <ul className="nav-links" id="nav-links">
             {pageLinks.map((link) => {
                 return (
                     <li key={link.id}>
@@ -22,9 +25,12 @@ const Navbar = () => {
                 )
             })}
           
-        </ul>
+        </ul> */}
 
-        <ul className="nav-icons">
+        <PageLinks parentClass='nav-links' itemClass='nav-link' />
+        <SocialLinks parentClass='nav-icons' itemClass='nav-icon' />
+
+        {/* <ul className="nav-icons">
           {socialLinks.map((link) => {
             // destructuring method
             const {id, href, icon} = link;
@@ -36,7 +42,7 @@ const Navbar = () => {
                 </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     </nav>
   )
